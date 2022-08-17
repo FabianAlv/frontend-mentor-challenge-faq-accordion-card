@@ -1,0 +1,179 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  color: hsl(237, 12%, 33%);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  background-color: white;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-radius: 3vh;
+  box-shadow: 0 6rem 3rem -3rem hsla(0, 0%, 0%, 0.2);
+  box-sizing: border-box;
+  margin-top: 8rem;
+  padding: 0 2rem;
+  width: 311px;
+}
+
+.card__image_container {
+  height: 103px;
+  margin: auto;
+  width: 237px;
+}
+
+.card__mobile_image {
+  position: relative;
+  top: -106px;
+}
+
+.card__desktop_image,
+.card__box_desktop {
+  display: none;
+}
+
+h1 {
+  color: hsl(238, 29%, 16%);
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.card__faq {
+  margin: 1rem 0;
+}
+
+.card__faq__question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__faq__question:hover,
+.card__faq__question:active {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.card__faq__question::after {
+  content: url(./images/icon-arrow-down.svg);
+}
+
+.card__faq__question--active {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+
+.card__faq__question--active::after {
+  transform: rotate(180deg);
+}
+
+.card__faq__answer {
+  color: hsl(240, 6%, 50%);
+  display: none;
+  line-height: 1.5rem;
+}
+
+.card__faq__answer--active {
+  display: block;
+}
+
+hr {
+  background-color: hsl(240, 5%, 91%);
+  border: none;
+  height: 0.1px;
+}
+
+hr:last-child {
+  margin-bottom: 4rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 376px) {
+  .card {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: -504px -256px;
+    background-size: 834px;
+    display: flex;
+    margin-top: 0;
+    height: 435px;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .card__image_container {
+    height: 0;
+    width: 331px;
+  }
+
+  .card__mobile_image {
+    display: none;
+  }
+
+  .card__box_image_overflow {
+    overflow: hidden;
+    position: relative;
+    top: -151px;
+  }
+
+  .card__desktop_image {
+    display: block;
+    left: -70px;
+    position: relative;
+    width: 400px;
+  }
+
+  .card__box_desktop {
+    display: block;
+    left: -102px;
+    position: relative;
+    top: -336px;
+    width: 152px;
+  }
+
+  .card__faqs {
+    margin: 6rem;
+    margin-top: 4.5rem;
+    width: 335px;
+  }
+
+  h1 {
+    display: block;
+    /* margin-top: 4.5rem; */
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  hr:last-child {
+    /* margin-bottom: 6rem; */
+    margin-bottom: 0;
+  }
+}
+
+/* Margins from chid element do noe collapse with the parent element it is just between brothers */
+/* I choosed to make the container of the image visible so the FAQ didn't need any margin but this will affect
+how we will relocate the image in the desktop view, it will not be that easy unless I revert some of the
+mobile changes or ignore them in the desktop version (So lets think of the best solution here) */
