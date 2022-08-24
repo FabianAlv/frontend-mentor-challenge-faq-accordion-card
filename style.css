@@ -31,7 +31,7 @@ body {
   border-radius: 3vh;
   box-shadow: 0 6rem 3rem -3rem hsla(0, 0%, 0%, 0.2);
   box-sizing: border-box;
-  height: 509px;
+  height: 475px;
   margin-top: 8rem;
   padding: 0 2rem;
   width: 311px;
@@ -102,7 +102,7 @@ h1 {
 hr {
   background-color: hsl(240, 5%, 91%);
   border: none;
-  height: 0.1px;
+  height: 1px;
   margin: 0;
 }
 
@@ -173,13 +173,3 @@ footer {
     margin-bottom: 0;
   }
 }
-
-/* Margins from chid element do noe collapse with the parent element it is just between brothers */
-/* I choosed to make the container of the image visible so the FAQ didn't need any margin but this will affect
-how we will relocate the image in the desktop view, it will not be that easy unless I revert some of the
-mobile changes or ignore them in the desktop version (So lets think of the best solution here) */
-/* To make the accordion animation I had to make the answer element instead of display none, make it not visible with height 0
-because of this the margins between the the question and the line were not collapsing anymore because there was an element in
-between which is somethng that I will keep in mind for the future in case I see this behavoir again  */
-/* Using the box model allowed me to play with giving space between the answer and the hr by using padding I made the that space part 
-of the animation */
