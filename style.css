@@ -151,10 +151,15 @@ footer {
 
   .card__box_desktop {
     display: block;
-    left: -102px;
+    left: -74px;
     position: relative;
     top: -336px;
     width: 152px;
+    transition: left 500ms;
+  }
+
+  .card__box_desktop--active {
+    left: -102px;
   }
 
   .card__faqs {

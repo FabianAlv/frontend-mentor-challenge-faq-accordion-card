@@ -39,3 +39,24 @@ function addOnClick() {
 }
 
 addOnClick();
+
+function activeCardBoxDesktop() {
+  const cardBox = document.getElementsByClassName('card__box_desktop')[0];
+  cardBox.classList.add('card__box_desktop--active');
+}
+
+function inactiveCardBoxDesktop() {
+  const cardBox = document.getElementsByClassName('card__box_desktop--active')[0];
+  cardBox.classList.remove('card__box_desktop--active');
+}
+
+function addOnMouseEvents() {
+  const questions = document.getElementsByClassName('card__faq__question');
+
+  for (let question of questions) {
+    question.onmouseover = () => activeCardBoxDesktop();
+    question.onmouseout = () => inactiveCardBoxDesktop();
+  }
+}
+
+addOnMouseEvents();
