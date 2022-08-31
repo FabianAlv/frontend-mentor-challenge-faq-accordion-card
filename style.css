@@ -160,6 +160,21 @@ footer {
 
   .card__box_desktop--active {
     left: -102px;
+    animation: action 2000ms ease-in-out infinite;
+  }
+
+  @keyframes action {
+    0% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    100% {
+      transform: translateX(5px);
+    }
   }
 
   .card__faqs {

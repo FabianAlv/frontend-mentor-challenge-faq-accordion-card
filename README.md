@@ -49,6 +49,28 @@ It is good to check the style of the page in multiple browsers I say this becaus
 
 I learned that there is not an easy way using CSS to make an element change styles when another element is hovered over, based on some (not deep at all) [research](https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered/32470900#32470900) I made searching for a solution to this, at the end you need elements to be siblings or have a relationship of parent and child to make it work easily but I didn´t like the idea of complicating my HTML for this. At the end I choosed to implement a solution with JS.
 
+Also learned a little bit about animations.
+
+```css
+.card__box_desktop--active {
+    animation: action 2000ms ease-in-out infinite;
+  }
+
+  @keyframes action {
+    0% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    100% {
+      transform: translateX(5px);
+    }
+  }
+```
+
 ### Continued development
 
 I want to focus more on animations and also on images, I do believe I struggled with the position of the images in the application so I want to practice that more so I have a better understanding of how to proceed when I need to position images in a certain way and how to handle the impact that will have in the rest of the content
